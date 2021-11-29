@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "target": "<site-name>",
+    "public": "deployments",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

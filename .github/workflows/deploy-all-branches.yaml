@@ -1,0 +1,24 @@
+name: deploy_to_firebase_hosting
+
+on:
+  push:
+
+jobs:
+  deploy_to_firebase_hosting:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@master
+        with:
+          fetch-depth: 0
+
+      - name: Run a shell
+        run: bash ./.github-action-script.sh
+
+      - name: Deploy to Firebase
+        uses: w9jds/firebase-action@master
+        with:
+          args: deploy --only hosting:<site-name>
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}

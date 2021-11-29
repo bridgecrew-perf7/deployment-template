@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "<project-name>"
+  },
+  "targets": {
+    "<project-name>": {
+      "hosting": {
+        "<site-name>": [
+          "<firbase-hosting-name>"
+        ]
+      }
+    }
+  }
+}
